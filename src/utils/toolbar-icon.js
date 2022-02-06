@@ -2,82 +2,82 @@ export default {
     bold: {
         prefix: '**',
         subfix: '**',
-        txt: '粗体'
+        txt: 'bold'
     },
     italic: {
         prefix: '*',
         subfix: '*',
-        txt: '斜体'
+        txt: 'italic'
     },
     title1: {
         prefix: '# ',
         subfix: '',
-        txt: '一级标题'
+        txt: 'title1'
     },
     title2: {
         prefix: '## ',
         subfix: '',
-        txt: '二级标题'
+        txt: 'title2'
     },
     title3: {
         prefix: '### ',
         subfix: '',
-        txt: '三级标题'
+        txt: 'title3'
     },
     title4: {
         prefix: '#### ',
         subfix: '',
-        txt: '四级标题'
+        txt: 'title4'
     },
     title5: {
         prefix: '##### ',
         subfix: '',
-        txt: '五级标题'
+        txt: 'title5'
     },
     underline: {
         prefix: '++',
         subfix: '++',
-        txt: '下划线'
+        txt: 'underline'
     },
     throughline: {
         prefix: '~~',
         subfix: '~~',
-        txt: '中划线'
+        txt: 'throughline'
     },
     mark: {
         prefix: '==',
         subfix: '==',
-        txt: '标记'
+        txt: 'mark'
     },
     sub: {
         prefix: '~',
         subfix: '~',
-        txt: '下标'
+        txt: 'sub'
     },
     sup: {
         prefix: '^',
         subfix: '^',
-        txt: '上标'
+        txt: 'sup'
     },
     left: {
         prefix: '::: hljs-left\n\n',
         subfix: '\n\n:::\n',
-        txt: '居左'
+        txt: 'left'
     },
     center: {
         prefix: '::: hljs-center\n\n',
         subfix: '\n\n:::\n',
-        txt: '居中'
+        txt: 'center'
     },
     right: {
         prefix: '::: hljs-right\n\n',
         subfix: '\n\n:::\n',
-        txt: '居右'
+        txt: 'right'
     },
     quotation: {
         prefix: '> ',
         subfix: '',
-        txt: '引用'
+        txt: 'quotation'
     },
     ul: {
         prefix: '- ',

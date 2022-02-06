@@ -45,13 +45,13 @@
             </span>
             <span
                 v-if="print"
-                @click="print"
+                @click="doPrint"
                 v-tooltip.top-center="$t('toolbar.right.print')"
                 ><i class="iconfont icon-print"></i
             ></span>
             <span
                 v-if="help"
-                @click="help"
+                @click="doHelp"
                 v-tooltip.top-center="$t('toolbar.right.help')"
                 ><i class="iconfont icon-help"></i
             ></span>
@@ -59,7 +59,7 @@
 
             <div
                 v-show="helpDocShow"
-                @click="help"
+                @click="doHelp"
                 class="help-pop markdown-body"
             >
                 <div class="dialog" v-html="helpMD"></div>
@@ -167,7 +167,7 @@ export default {
                 downloadLink.click();
             }
         },
-        print() {
+        doPrint() {
             // print render html
             const printDom = this.dom();
             const WinPrint = window.open(
@@ -181,7 +181,7 @@ export default {
             WinPrint.print();
             WinPrint.close();
         },
-        help() {
+        doHelp() {
             this.helpDocShow = !this.helpDocShow;
         }
     },
