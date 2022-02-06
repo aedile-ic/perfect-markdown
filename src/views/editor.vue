@@ -25,7 +25,6 @@
         :quotation="quotation"
         :ul="ul"
         :ol="ol"
-        :throughline="throughline"
         :code="code"
         :table="table"
         :link="link"
@@ -33,7 +32,8 @@
         :fileImage="fileImage"
         :linkVideo="linkVideo"
         :fileVideo="fileVideo"
-        :attachment="attachment"
+        :linkAttachment="linkAttachment"
+        :fileAttachment="fileAttachment"
         :clear="clear"
       >
         <slot name="toolbarLeftBefore" slot="toolbarLeftBefore"></slot>
@@ -289,7 +289,11 @@ export default {
       type: Boolean,
       default: true,
     },
-    attachment: {
+    linkAttachment: {
+      type: Boolean,
+      default: true,
+    },
+    fileAttachment: {
       type: Boolean,
       default: true,
     },

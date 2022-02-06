@@ -183,9 +183,8 @@
             <li v-if="linkVideo" @click="addVideFromLink">
               {{ $t("toolbar.left.fromNetwork") }}
             </li>
-            <li>
+            <li v-if="fileVideo">
               <input
-                v-if="fileVideo"
                 type="file"
                 accept="video/mp4,audio/mp4"
                 @change="(e) => addVideoFromLocal(e)"
@@ -196,7 +195,7 @@
         </transition>
       </span>
       <span
-        v-if="attachment"
+        v-if="linkAttachment || fileAttachment"
         v-tooltip.top-center="$t('toolbar.left.attachment')"
         @click="clickHandler('file', 'menu')"
         @mouseenter="showFileMenu"
@@ -210,10 +209,10 @@
             @mouseenter="showFileMenu"
             @mouseleave="hideFileMenu"
           >
-            <li @click="addFileFromLink">
+            <li v-if="linkAttachment" @click="addFileFromLink">
               {{ $t("toolbar.left.fromNetwork") }}
             </li>
-            <li>
+            <li v-if="fileAttachment">
               <input
                 type="file"
                 accept="*"
@@ -462,7 +461,11 @@ export default {
       type: Boolean,
       default: true,
     },
-    attachment: {
+    linkAttachment: {
+      type: Boolean,
+      default: true,
+    },
+    fileAttachment: {
       type: Boolean,
       default: true,
     },
