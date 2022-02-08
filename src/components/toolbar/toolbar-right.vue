@@ -44,13 +44,13 @@
                 <i class="iconfont icon-export"></i>
             </span>
             <span
-                v-if="print"
+                v-if="printBtn"
                 @click="doPrint"
                 v-tooltip.top-center="$t('toolbar.right.print')"
                 ><i class="iconfont icon-print"></i
             ></span>
             <span
-                v-if="help"
+                v-if="helpBtn"
                 @click="doHelp"
                 v-tooltip.top-center="$t('toolbar.right.help')"
                 ><i class="iconfont icon-help"></i
@@ -106,11 +106,11 @@ export default {
             type: Boolean,
             default: true
         },
-        print: {
+        printBtn: {
             type: Boolean,
             default: true
         },
-        help: {
+        helpBtn: {
             type: Boolean,
             default: true
         },

@@ -48,8 +48,8 @@
         :fullscreen="fullscreen"
         :importBtn="importBtn"
         :exportBtn="exportBtn"
-        :print="print"
-        :help="help"
+        :printBtn="printBtn"
+        :helpBtn="helpBtn"
       >
         <slot name="toolbarRightBefore" slot="toolbarRightBefore"></slot>
         <slot name="toolbarRightAfter" slot="toolbarRightAfter"></slot>
@@ -317,11 +317,11 @@ export default {
       type: Boolean,
       default: true,
     },
-    print: {
+    printBtn: {
       type: Boolean,
       default: true,
     },
-    help: {
+    helpBtn: {
       type: Boolean,
       default: true,
     }
