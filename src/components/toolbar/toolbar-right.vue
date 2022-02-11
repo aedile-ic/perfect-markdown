@@ -189,7 +189,7 @@ export default {
         "$i18n.locale": {
             immediate: true,
             handler(val) {
-                if (val) {
+                if (this.helpBtn && val) {
                     this.helpMD = md.render(help[val || "en"]);
                 }
             }
